@@ -1,0 +1,358 @@
+   <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+
+*{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Plus Jakarta Sans; 
+        }
+
+.app-container{
+ background-color: hsl(202, 86%, 94%) ;
+ min-height: 100vh;
+}
+
+.card{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+section.first{
+  padding: 1.8rem 1.5rem;
+  background-color: hsl(0, 0%, 100%) ;
+  border-radius: 15px 0 15px 15px;
+  width: 320px;
+  height: 420px;
+  
+  box-shadow: 2px 0 2px hsl(200, 24%, 40%);
+}
+
+section.first header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+section.first header h3{
+  font-size: 16px;
+  color:hsl(202, 55%, 16%) ;
+  text-transform: capitalize;
+  font-weight: 700;
+}
+
+section.first header button{
+  background: none;
+  border: none;
+  text-transform: capitalize;
+  border-bottom: 1px dotted  hsl(4, 69%, 50%);
+}
+
+form{
+  height: 300px;
+  background-color:hsl(0, 0%, 100%) ;
+}
+
+fieldset.one{
+padding: .5rem 0;
+border: none;
+margin-bottom: .4rem;
+}
+
+fieldset.one label{
+  font-size: 14px;
+  color: hsl(202, 55%, 16%) ;
+  text-transform: capitalize;
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+.amount{
+  position: relative;
+}
+
+.amount input{
+  display: block;
+  width: 100%;
+  padding: .3rem 0;
+  padding-left: 2rem;
+  border-radius: 3px;
+  border: 1px solid  hsl(200, 24%, 40%);
+  box-shadow: 5px hsl(200, 24%, 40%);
+}
+
+.amount input::placeholder{
+  color:hsl(202, 55%, 16%) ;
+  font-weight: 700;
+}
+
+.amount span {
+  position: absolute;
+  top: 2%;
+  left: 1px;
+  background-color:  hsl(202, 86%, 94%);
+  padding: 6px .5rem;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.fieldset-holder{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .5rem 0;
+  margin-bottom: .9rem;
+}
+
+.fieldset-holder fieldset{
+  border: none;
+}
+
+.fieldset-holder fieldset label{
+  font-size: 13px;
+  color:hsl(202, 55%, 16%);
+  text-transform: capitalize;
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+
+.fieldset-holder .term{
+  position: relative;
+}
+
+.fieldset-holder .term input{
+  padding: .4rem .6rem;
+  width: 130px;
+  border-radius: 3px;
+  border: 1px solid hsl(200, 24%, 40%);
+  box-shadow: 5px hsl(200, 24%, 40%);
+}
+
+.fieldset-holder .term input::placeholder{
+  color:hsl(202, 55%, 16%);
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.fieldset-holder fieldset span{
+  position: absolute;
+  padding:7px .5rem;
+  top: 4%;
+  right: 1%;
+  font-size: 12px;
+  font-weight: 550;
+  color:hsl(202, 55%, 16%);
+  background-color:hsl(202, 86%, 94%) ;
+}
+
+.only{
+margin-bottom: 1.5rem;
+}
+
+label.main{
+font-size: 13px;
+color:hsl(202, 55%, 16%);
+text-transform: capitalize;
+display: block;
+margin-bottom: .3rem;
+}
+
+fieldset.type{
+  margin-bottom: .3rem;
+  border-radius: 3px;
+  padding: .3rem 0;
+  padding-left: .7rem;
+  border: 1px solid hsl(200, 24%, 40%);
+  box-shadow: 5px hsl(200, 24%, 40%);
+}
+
+fieldset.type label{
+  font-weight: 700;
+  font-size: 13px;
+  color: hsl(202, 55%, 16%);
+ margin-left: .5rem;
+}
+
+form button{
+  background: none;
+  border: none;
+  background-color: hsl(61, 70%, 52%);
+  color:hsl(202, 55%, 16%) ;
+  padding: .5rem 1.5rem;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-weight: 700;
+}
+
+form button img{
+  display: grid;
+  place-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+section.second{
+  padding: 1.8rem 1.5rem;
+  background-color:  hsl(202, 55%, 16%);
+  border-radius: 0 15px 15px 35px;
+  width: 320px;
+  height: 420px;
+}
+
+article.result{
+  margin-bottom: 1.7rem;
+}
+
+article.result h3{
+  color: hsl(0, 0%, 100%);
+  margin-bottom: 1rem;
+}
+
+article.result p{
+  color:hsl(203, 41%, 72%);
+  font-size: 10.5px;
+  line-height: 1.5;
+}
+
+article.repay{
+  height: 200px;
+  background-color: hsl(204, 61%, 11%);
+  border-radius: 8px;
+  border-top: 2px solid hsl(61, 70%, 52%);
+  padding: 1.5rem 1.5rem;
+  z-index: 1000;
+}
+
+article.repay .biggest p{
+  color:hsl(203, 41%, 72%);
+  font-size: 10.5px;
+  margin-bottom: 0.8rem;
+}
+
+article.repay .biggest h1{
+  font-size: 40px;
+  color: hsl(61, 70%, 52%);
+  padding-bottom: 1rem;
+  border-bottom: .1rem solid hsl(203, 41%, 72%);;
+}
+
+article.repay .dolls{
+margin-top: 1rem;
+}
+
+article.repay .dolls p{
+  font-size: 10.5px;
+  color:hsl(203, 41%, 72%);
+  margin-bottom: 0.7rem;
+}
+
+article.repay .dolls h3{
+  color: hsl(0, 0%, 100%) ;
+}
+    </style>
+  </head>
+
+  <body>
+    <div class="app-container">
+      <div class="card">
+        <section class="first">
+          <header>
+            <h3>mortgage calculator</h3>
+            <button>clear all</button>
+          </header>
+
+          <form>
+            <!-- first child -->
+            <fieldset class="one">
+              <label for="">mortgage amount</label>
+              <div class="amount">
+                <span>£</span>
+                <input type="number" placeholder="300,000">
+              </div>
+            </fieldset>
+
+            
+            <!-- second child -->
+            <div class="fieldset-holder">
+              <fieldset>
+                <label for="">mortgage term</label>
+                <div class="term">
+                  <input type="number" placeholder="25">
+                  <span>years</span>
+                </div>
+              </fieldset>
+
+              <fieldset>
+                <label for="">interest rate</label>
+                <div class="term">
+                  <input type="number" placeholder="5.25">
+                  <span>%</span>
+                </div>
+              </fieldset>
+            </div>
+
+            <!-- third child -->
+            <div class="only">
+
+              <label class="main">mortgage type</label>
+
+              <fieldset class="type">
+                <input type="radio" name="same" id="repayment-type">
+              <label for="repayment-type">Repayment</label>
+              </fieldset>
+
+              <fieldset class="type">
+                <input type="radio" name="same" id="class-type">
+                <label for="class-type">
+               Interest Only
+              </label>
+              </fieldset>
+
+              </div>
+          
+
+            <!-- fourth child -->
+            <button>
+              <img src="./images/icon-calculator.svg" alt="" />
+              <span>Calculate Repayments</span>
+            </button>
+          </form>
+        </section>
+
+        <section class="second">
+          <article class="result">
+            <h3>Your results</h3>
+            <p>your results are shown below based on the information you provided. To adjust the results, edit the form and click "calculate repayments" again. </p>
+          </article>
+
+          <article class="repay">
+            <div class="biggest">
+              <p>your monthly repayments</p>
+              <h1>£1,797.74</h1>
+            </div>
+
+            <div class="dolls">
+            <p>total you'll repay over the term</p>
+              <h3>£539,322.94</h3>
+            </div>
+          </article>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>
+
+
